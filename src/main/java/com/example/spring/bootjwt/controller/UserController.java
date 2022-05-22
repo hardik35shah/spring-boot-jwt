@@ -9,7 +9,8 @@ import java.security.Principal;
 public class UserController {
 
     @GetMapping("/principal")
-    public Principal retrievePrincipal(Principal principal) {
-        return principal;
+    public String retrievePrincipal(Principal principal) {
+       String name=principal.getName();
+        return name;
     }
 }
